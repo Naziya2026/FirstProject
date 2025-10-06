@@ -5,11 +5,11 @@ import Header from "./components/Header";
 import Footer from "./components/Footer";
 
 import Home from "./pages/Home";
-import About from "./pages/about";
+import About from "./pages/About";
 import Services from "./pages/Services";
 import Gallery from "./pages/Gallery";
-import Testimonials from "./pages/testimonials";
-import Contact from "./pages/contact";
+import Testimonials from "./pages/Testimonials";
+import Contact from "./pages/Contact";
 import ServicesDetails from "./pages/ServicesDetails";
 import GalleryDetail from "./pages/GalleryDetail"; // ✅ This line is important
 
