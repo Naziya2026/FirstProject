@@ -1,0 +1,211 @@
+.footer {
+  background-color: #222;
+  color: #ccc;
+  padding: 80px 20px 40px; /* extra top padding for card overlap */
+  position: relative;
+  width: 100%;
+  overflow: visible; /* important for card overlap */
+}
+
+.footer-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  position: relative;
+}
+
+/* Left card with logo, tagline, social */
+.footer-card {
+  background-color: #222;
+  padding: 20px 30px 30px;
+  width: 300px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+  position: relative;
+  top: -120px; /* lift the card above footer */
+  z-index: 20;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  border: 1px solid #444;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Logo */
+.footer-logo img.logo-img {
+  width: 220px;
+  height: auto;
+  display: block;
+  margin-bottom: 12px;
+  border-radius: 8px;
+}
+
+/* Tagline */
+.footer-tagline {
+  font-style: italic;
+  font-size: 18px;
+  color: #ccc;
+  margin-bottom: 20px;
+}
+
+/* Social Section */
+.social-section h4 {
+  margin-bottom: 12px;
+  font-size: 18px;
+  text-transform: uppercase;
+  color: #f9a825; /* gold-ish */
+  font-weight: 700;
+}
+
+.footer-social-icons {
+  display: flex;
+  gap: 18px;
+  font-size: 24px;
+}
+
+/* Social Icon Colors */
+.footer-social-icons a.whatsapp-icon {
+  color: #25d366;
+}
+
+.footer-social-icons a.instagram-icon {
+  color: #c13584;
+}
+
+.footer-social-icons a.youtube-icon {
+  color: #ff0000;
+}
+
+.footer-social-icons a.facebook-icon {
+  color: #3b5998;
+}
+
+.footer-social-icons a.twitter-icon {
+  color: #1da1f2;
+}
+
+.footer-social-icons a:hover {
+  opacity: 0.8;
+  transform: scale(1.1);
+  transition: all 0.3s ease;
+}
+
+/* Useful Links section */
+.footer-section.useful-links {
+  flex: 1 1 400px;
+  margin-left: 150px;
+  color: #ccc;
+}
+
+.footer-section.useful-links h3 {
+  position: relative;
+  display: inline-block;
+  padding-bottom: 5px;
+  color: #fff;
+  font-size: 18px;
+  text-transform: uppercase;
+  cursor: default;
+}
+
+.footer-section.useful-links h3::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 3px;
+  background: linear-gradient(
+    to right,
+    #eb9007 0%,
+    #fff 50%,
+    #ec9007 100%
+  );
+  background-size: 200% 100%;
+  background-position: -100% 0;
+  animation: slideUnderline 2s linear infinite;
+  border-radius: 2px;
+}
+
+@keyframes slideUnderline {
+  0% {
+    background-position: -100% 0;
+  }
+  100% {
+    background-position: 100% 0;
+  }
+}
+
+/* Useful Links List */
+.footer-links-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 30px 20px;
+}
+
+.footer-links-list li a {
+  text-decoration: none;
+  color: #ccc;
+  transition: color 0.3s ease;
+  position: relative;
+  padding-bottom: 2px;
+}
+
+.footer-links-list li a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 2px;
+  width: 0;
+  background-color: #efcb12; /* gold/yellow color */
+  transition: width 0.3s ease;
+  border-radius: 2px;
+}
+
+.footer-links-list li a:hover {
+  color: #efcb12;
+}
+
+.footer-links-list li a:hover::after {
+  width: 100%;
+}
+
+
+/* Footer copyright */
+.footer-copy {
+  margin-top: 60px;
+  text-align: center;
+  color: #999;
+  font-size: 14px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .footer-inner {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .footer-card {
+    width: 100%;
+    top: 0;
+    margin-bottom: 30px;
+    box-shadow: none;
+    border-radius: 0;
+    padding: 20px 10px;
+  }
+
+  .footer-section.useful-links {
+    margin-left: 0;
+    margin-top: 20px;
+  }
+
+  .footer-links-list {
+    grid-template-columns: 1fr;
+  }
+}

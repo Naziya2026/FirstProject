@@ -1,0 +1,17 @@
+.contact-section {
+  padding: 60px 20px;
+  text-align: center;
+  background-color: #f9f9f9;
+}
+
+.contact-heading {
+  font-size: 2rem;
+  color: #2c3e50;
+  margin-bottom: 30px;
+  font-family: 'Lobster Two', cursive;
+}
+
+.form-wrapper {
+  max-width: 600px;
+  margin: 0 auto;
+}

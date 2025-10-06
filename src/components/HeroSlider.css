@@ -1,0 +1,88 @@
+/* HeroSlider Layout */
+.hero-slider {
+  position: relative;
+  height: 100vh;
+  width: 100%;
+  overflow: hidden;
+}
+
+/* Media Styling */
+.hero-image,
+.hero-video {
+  width: 100%;
+  height: 100vh;
+  object-fit: cover;
+  display: block;
+}
+
+/* Text Overlay */
+.overlay {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  z-index: 2;
+  color: white;
+  padding: 1rem;
+}
+
+.overlay-text {
+  font-size: 3rem;
+  font-weight: bold;
+  color: #fff;
+}
+
+.highlight {
+  color: black; /* Brand highlight color */
+}
+
+/* Manual Navigation Controls */
+.slider-controls {
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  z-index: 3;
+}
+
+.slider-controls button {
+  background-color: rgba(0, 0, 0, 0.5);  /* Dark semi-transparent background */
+  color: white;
+  border: none;
+  border-radius: 50%;
+  width: 44px;
+  height: 44px;
+  font-size: 20px;
+  font-weight: bold;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background-color 0.3s ease, transform 0.2s;
+}
+
+.slider-controls button:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+  transform: scale(1.1);
+}
+
+/* Responsive Adjustments */
+@media (max-width: 600px) {
+  .overlay-text {
+    font-size: 2rem;
+  }
+
+  .slider-controls {
+    bottom: 10px;
+    right: 10px;
+  }
+
+  .slider-controls button {
+    width: 36px;
+    height: 36px;
+    font-size: 16px;
+  }
+}

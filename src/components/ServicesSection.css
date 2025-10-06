@@ -1,0 +1,103 @@
+.services-section {
+  max-width: 1200px;
+  margin: 60px auto;
+  padding: 0 20px;
+  color: #333;
+}
+
+/* Heading container with image */
+.services-heading-container {
+  position: relative;
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.heading-image {
+  width: 100%;
+  max-width: 500px;
+  margin: 0 auto;
+  display: block;
+}
+
+.services-heading {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #000;
+  white-space: nowrap;
+  line-height: 1.2;
+  font-family: "Lobster Two", sans-serif;
+
+}
+
+/* Panels container */
+.services-panels {
+  display: flex;
+  gap: 40px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+/* Individual service panel */
+.service-panel {
+  flex: 1 1 400px;
+  padding: 30px;
+  border-radius: 12px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.service-panel h3 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+  color: #000;
+  font-family: "Lobster Two", sans-serif;
+
+}
+
+.service-img {
+  max-width: 100%;
+  max-height: 220px;
+  object-fit: cover;
+  border-radius: 10px;
+  margin-bottom: 20px;
+}
+
+.service-panel p {
+  font-size: 1rem;
+  line-height: 1.6;
+  margin-bottom: 25px;
+  color: #555;
+  font-family: 'Poppins', sans-serif;
+
+}
+
+.read-more-btn {
+  background-color: #2c3e50;
+  color: #fff;
+  padding: 12px 28px;
+  font-weight: 600;
+  font-size: 1rem;
+  border: none;
+  border-radius: 6px;
+  text-decoration: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  display: inline-block;
+}
+
+.read-more-btn:hover {
+  background-color: #f3ab5e;
+
+}
+
+.read-more-btn.disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+  pointer-events: none;
+}
