@@ -44,6 +44,18 @@ export default function HeroSlider() {
     return () => clearInterval(interval);
   }, [current]);
 
+  useEffect(() => {
+    const setVH = () => {
+      let vh = window.innerHeight * 0.01;
+      document.documentElement.style.setProperty("--vh", `${vh * 100}px`);
+    };
+
+    setVH();
+    window.addEventListener("resize", setVH);
+
+    return () => window.removeEventListener("resize", setVH);
+  }, []);
+  
   const nextSlide = () => {
     setCurrent((prev) => (prev + 1) % slides.length);
   };

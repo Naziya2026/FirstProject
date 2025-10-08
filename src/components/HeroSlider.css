@@ -1,7 +1,7 @@
 /* HeroSlider Layout */
 .hero-slider {
   position: relative;
-  height: 100vh;
+  height: var(--vh);
   width: 100%;
   overflow: hidden;
 }
@@ -10,9 +10,10 @@
 .hero-image,
 .hero-video {
   width: 100%;
-  height: 100vh;
+  height: 100%;
   object-fit: cover;
   display: block;
+  transition: opacity 0.5s ease-in-out;
 }
 
 /* Text Overlay */
@@ -24,13 +25,14 @@
   text-align: center;
   z-index: 2;
   color: white;
-  padding: 1rem;
+  padding: 1rem env(safe-area-inset-left) 1rem env(safe-area-inset-right);
 }
 
 .overlay-text {
-  font-size: 3rem;
+  font-size: clamp(1.5rem, 5vw, 3rem); /* Fluid responsive font size */
   font-weight: bold;
   color: #fff;
+  line-height: 1.2;
 }
 
 .highlight {
@@ -70,9 +72,15 @@
 }
 
 /* Responsive Adjustments */
-@media (max-width: 600px) {
+@media (max-width: 900px) {
   .overlay-text {
-    font-size: 2rem;
+    font-size: clamp(1.2rem, 5vw, 2.5rem);
+  }
+}
+
+@media (max-width: 480px) {
+  .overlay-text {
+    font-size: clamp(1rem, 6vw, 2rem);
   }
 
   .slider-controls {

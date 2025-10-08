@@ -101,3 +101,15 @@
   cursor: not-allowed;
   pointer-events: none;
 }
+
+.services-heading {
+  font-size: clamp(1.6rem, 5vw, 2.5rem);
+}
+
+.service-panel h3 {
+  font-size: clamp(1.5rem, 4vw, 2.5rem);
+}
+
+.service-panel p {
+  font-size: clamp(0.9rem, 2.5vw, 1rem);
+}

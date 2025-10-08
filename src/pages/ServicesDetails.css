@@ -18,7 +18,7 @@
   text-align: center;
   font-size: 1.5rem;
   margin-bottom: 2.5rem;
-  color:  #e7710b;
+  color: #e7710b;
 }
 
 .services-cards-container {
@@ -61,7 +61,7 @@
 .service-img-wrapper img {
   width: 100%;
   height: 100%;
-  object-fit: contain;
+  object-fit: cover; /* Changed from 'contain' to 'cover' */
   display: block;
 }
 
@@ -116,6 +116,8 @@
   top: 0;
   bottom: 0;
   width: 200px;
+  left: 80px;
+  background-image: url('../assets/leftborder.png');
   background-repeat: no-repeat;
   background-size: cover;
   background-position: top;
@@ -123,18 +125,12 @@
   pointer-events: none;
 }
 
-.services-left-border {
-  left: 80px;
-  background-image: url('../assets/leftborder.png');
-}
-
-
 .services-details-section {
   position: relative;
   z-index: 2;
 }
 
-/* Responsive for small screens */
+/* ✅ Responsive for small screens */
 @media (max-width: 768px) {
   .service-card,
   .service-card.zag,
@@ -151,5 +147,17 @@
 
   .service-text {
     width: 100%;
+  }
+
+  .common-heading {
+    font-size: 2.5rem;
+  }
+
+  .services-tagline {
+    font-size: 1.2rem;
+  }
+
+  .services-left-border {
+    display: none;
   }
 }

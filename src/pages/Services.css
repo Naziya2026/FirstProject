@@ -191,16 +191,24 @@
   }
   
   .image-circle-1 {
-    width: 140px;
-    height: 140px;
+    width: 220px;
+    height: 220px;
     top: 40%;
     left: 40%;
   }
   
   .image-circle-2 {
-    width: 100px;
-    height: 100px;
-    top: 65%;
-    left: 60%;
+    width: 130px;
+    height: 130px;
+    position: absolute;
+    top: 290px;
+    left: 100px;
+    overflow: hidden;
+  }
+
+  .circle-large,
+  .circle-medium,
+  .circle-small {
+    display: none;
   }
 }

@@ -1,116 +1,23 @@
 .about-container {
   position: relative;
   overflow: hidden;
-  padding: 40px 80px; 
+  padding: 40px 80px;
   background-color: #fff;
   min-height: 100%;
 }
 
-.about-content {
-  max-width: 1200px;
-  margin: 0 auto;
-  display: flex;
-  flex-direction: row;
-  gap: 80px; /* space between text and image */
-  background-color: transparent;
-}
-
-.about-text {
-  flex: 1;
-  padding: 20px;
-  color: #333;
-}
-
-.about-text h1 {
-  font-family: "Lobster", sans-serif;
-  font-size: 50px;
-  text-align: center;
-  margin-bottom: 20px;
-  color: #222;
-}
-
-.about-text p {
-  font-family: 'Poppins', sans-serif; 
-  font-size: 17px;
-  line-height: 1.7;
-  color: #333;
-  margin-bottom: 16px;
-  text-align: justify;
-}
-
-.about-image {
-  flex: 1;
-  padding: 20px; 
-}
-
-.about-image img {
-  width: 100%;
-  height: 100%;
-  display: block;
-  object-fit: cover;
-  border-radius: 8px; 
-}
-
-/* Responsive */
-@media (max-width: 768px) {
-  .about-content {
-    flex-direction: column;
-    gap: 20px; /* smaller gap on mobile */
-  }
-
-  .about-text,
-  .about-image {
-    padding: 10px;
-  }
-
-  .about-text h1 {
-    font-size: 26px;
-  }
-}
-
-.about-bottom-text {
-  margin-top: 50px;
-  padding: 0 20px;
-  max-width: 900px;
-  margin-left: auto;
-  margin-right: auto;
-  font-family: 'Poppins', sans-serif;
-  text-align: center;
-  
-  color: #444;
-}
-
-.about-bottom-text h2 {
-  font-family: "Lobster", sans-serif;
-  font-size: 28px;
-  color: #111;
-  margin-bottom: 16px;
-}
-
-.about-bottom-text p {
-  font-size: 16px;
-  line-height: 1.7;
-  color: #555;
-}
-
-.about-container {
-  position: relative;
-  overflow: hidden;
-  padding: 40px 20px;
-}
-
-/* Side Decorative Borders */
+/* Decorative Borders */
 .about-left-border,
 .about-right-border {
   position: absolute;
   top: 0;
   bottom: 0;
-  width: 140px; 
+  width: 140px;
   background-repeat: no-repeat;
   background-size: cover;
   background-position: top;
   z-index: 1;
-  pointer-events: none; 
+  pointer-events: none;
 }
 
 .about-left-border {
@@ -123,10 +30,109 @@
   background-image: url('../assets/rightborder.png');
 }
 
-/* Ensure content is above the borders */
-.about-content,
-.about-bottom-text {
+/* Main Content */
+.about-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: row;
+  gap: 80px;
+  background-color: transparent;
   position: relative;
   z-index: 2;
 }
 
+.about-text {
+  flex: 1;
+  padding: 20px;
+  color: #333;
+}
+
+.about-text h1 {
+  font-family: "Lobster", sans-serif;
+  font-size: 3rem;
+  text-align: center;
+  margin-bottom: 20px;
+  color: #222;
+}
+
+.about-text p {
+  font-family: 'Poppins', sans-serif;
+  font-size: 1.1rem;
+  line-height: 1.7;
+  color: #333;
+  margin-bottom: 16px;
+  text-align: justify;
+}
+
+.about-image {
+  flex: 1;
+  padding: 20px;
+}
+
+.about-image img {
+  width: 100%;
+  height: auto; /* changed to auto for proper aspect ratio */
+  display: block;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+/* Bottom Text */
+.about-bottom-text {
+  margin-top: 50px;
+  padding: 0 20px;
+  max-width: 900px;
+  margin-left: auto;
+  margin-right: auto;
+  font-family: 'Poppins', sans-serif;
+  text-align: center;
+  color: #444;
+  position: relative;
+  z-index: 2;
+}
+
+.about-bottom-text h2 {
+  font-family: "Lobster", sans-serif;
+  font-size: 1.8rem;
+  color: #111;
+  margin-bottom: 16px;
+}
+
+.about-bottom-text p {
+  font-size: 1rem;
+  line-height: 1.7;
+  color: #555;
+}
+
+/* Responsive: Tablet & Mobile */
+@media (max-width: 768px) {
+  .about-content {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .about-text,
+  .about-image {
+    padding: 10px;
+  }
+
+  .about-text h1 {
+    font-size: 2rem;
+  }
+
+  .about-text p,
+  .about-bottom-text p {
+    font-size: 0.95rem;
+  }
+
+  /* Hide side borders on mobile */
+  .about-left-border,
+  .about-right-border {
+    display: none;
+  }
+
+  .about-bottom-text h2 {
+    font-size: 1.4rem;
+  }
+}
